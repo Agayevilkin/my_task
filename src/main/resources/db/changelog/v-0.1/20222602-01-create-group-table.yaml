@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20222602-01
+      author: agayev
+      changes:
+        - createTable:
+            tableName: groups
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: groups_pkey
+                    nullable: false
+              - column:
+                  name: groupsName
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: courses
+                  type: bigint
